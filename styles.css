@@ -1,0 +1,16 @@
+img {
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 600px;
+    height: 200px;
+    object-fit: cover;
+
+}
+#foodHolder {
+    width: 800px;
+    height: auto;
+    background-color: black;
+}

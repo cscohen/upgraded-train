@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cooking Mama</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script defer type="text/javascript" src="src/index.js"></script>
+
+</head>
+
+<body>
+
+<!-- For image placeholder for Hero Banner --> 
+<div id='heroImage'>
+    <img src='img/heroBanner.jpg'>
+</div>    
+<!-- For image placeholder for recipie --> 
+<div id='foodHolder'></div>
+
+<div id='sumbitForm'>
+     <select>
+        <option selected disabled>--Search by--</option>
+        <option id='searchIng'>Ingredient</option>
+        <option id='searchName'>Name</option>
+        <option id='searchFirst'>First Letter</option>
+        <option></option>
+    </select>
+        <form>        
+            <input type="text" required> 
+            <input type="submit"> 
+        </form>
+        <button type="button">Generate a random recipie</button>
+</div>
+</body>
+</html>
