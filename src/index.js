@@ -22,9 +22,10 @@ const generateMeal = meal => {
 		}
 	}
     //append the data from returned data and make it into something readable
+    //there has to be a better way for this one this needs formatting as well
     const newInnerHTML = `
-		<div class="row">
-			<div class="columns five">
+		<div>
+			<div>
 				<img src="${meal.strMealThumb}" alt="Meal Image" id='recipeImage'>
 			</div>
 				<h2>${meal.strMeal}</h2>
@@ -66,3 +67,6 @@ function recipeSearch(mealName) {
 function el(id) {
     return document.getElementById(id)
 }
+
+
+// need to concat the search with the api http://www.themealdb.com/api/json/v1/1/search.php?s= + whatever the input box is chicken
