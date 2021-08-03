@@ -80,7 +80,7 @@ randomMealButton.addEventListener('click', () => {
     })
 })
 
-//searchButton.addEventListener('submit',recipieSearch())
+//searchButton.addEventListener('submit',recipeSearch())
 
 //trying initial api once again
 
@@ -102,15 +102,8 @@ function regionSearch(region) {
         })
     }
 //console.log(regionSearch('Canadian'))
-// need to build a for loop for the search if there are more than one result:
-/*
-should be able to use generate meal in recipeSearch...
-}
-*/
+//recipeSearch('chicken')
 
 function el(id) {
     return document.getElementById(id)
 }
-
-
-// need to concat the search with the api http://www.themealdb.com/api/json/v1/1/search.php?s= + whatever the input box is chicken
