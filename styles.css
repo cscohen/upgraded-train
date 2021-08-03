@@ -9,8 +9,27 @@ img {
     object-fit: cover;
 
 }
+.heroImage {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 72px;
+    filter: drop-shadow(30px 10px 4px black);    
+    color: white;
+  }
 #foodHolder {
     width: 800px;
     height: auto;
-    background-color: black;
+}
+#recipeImage {
+    margin-top: 10px;
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
 }

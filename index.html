@@ -15,24 +15,40 @@
 
 <!-- For image placeholder for Hero Banner --> 
 <div id='heroImage'>
-    <img src='img/heroBanner.jpg'>
+    <img src='img/heroBanner.jpg' style='width:100%'>
+    <div class ='top-left'> Strugging to figure out what to nom? </div>
 </div>    
 <!-- For image placeholder for recipie --> 
-<div id='foodHolder'></div>
+<div id='recipeCard'>
+    <div class='image-container'>
+        <div class='image-card'>
+  <!--        <h2 id="food-title" class="title">Title of recipe goes here</h2> -->
+	<div id="meal" class="row meal"></div>
 
-<div id='sumbitForm'>
-     <select>
-        <option selected disabled>--Search by--</option>
-        <option id='searchIng'>Ingredient</option>
-        <option id='searchName'>Name</option>
-        <option id='searchFirst'>First Letter</option>
-        <option></option>
-    </select>
-        <form>        
-            <input type="text" required> 
-            <input type="submit"> 
-        </form>
-        <button type="button">Generate a random recipie</button>
+        <button type="button" id='randomFood'>Generate a random recipe</button>
+
+        <div class='food-list'></div>
+        <ul class='ingredList'></ul>
+              <ol id='ingredient'></ol>
+        <div class='recipePrintout'></div>
+        <ol id='recipe'></ol>
+    </div>
+    <div id='foodHolder'></div>
+    
+    <div id='sumbitForm'>
+         <select>
+            <option selected disabled>--Search by--</option>
+            <option id='searchIng'>Ingredient</option>
+            <option id='searchName'>Name</option>
+            <option id='searchFirst'>First Letter</option>
+            <option></option>
+        </select>
+            <form class='food-search'>        
+                <input type='text' required> 
+                <input type='submit'> 
+            </form>
+    
+    </div>
 </div>
 </body>
 </html>
