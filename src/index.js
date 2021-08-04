@@ -2,11 +2,15 @@ console.log('This is connected!')
 const recTitle = el('food-title')
 const recInstruction = el('recipe') 
 const recImg = el('food-image')
-const searchButton = el('food-search')
 const randomMealButton = el('randomFood')
-const randomRec = document.getElementById('meal');
+const randomRec = el('meal');
 const mealSearch = 'http://www.themealdb.com/api/json/v1/1/search.php?s='
 const getRandomRec = 'https://themealdb.com/api/json/v1/1/random.php'
+
+const form = el('sumbitForm')
+
+const search = el('search')
+const submit = el('submit')
 
 const generateRegionMeal = meal => {
         const regionalMenu = []
@@ -70,7 +74,7 @@ const generateMeal = meal => {
 // how to get title above the button to also generate
     randomRec.innerHTML = newInnerHTML;
 };
-
+console.log(form)
 //uses the random api fetch to grab a random recipe on click
 randomMealButton.addEventListener('click', () => {
     fetch(getRandomRec)
@@ -80,19 +84,23 @@ randomMealButton.addEventListener('click', () => {
     })
 })
 
-//searchButton.addEventListener('submit',recipeSearch())
-
-//trying initial api once again
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const mealName = search.value
+    recipeSearch(mealName)
+}) 
 
 //api search using a term fetches url and concats the search value
 function recipeSearch(mealName) {
 const mealSearchURL = `https://www.themealdb.com/api/json/v1/1/search.php?s=`+mealName
-    fetch(mealSearchURL)
-    .then(resp => resp.json())
-    .then(resp => {
+fetch(mealSearchURL)
+.then(resp => resp.json())
+.then(resp => {
         generateMeal(resp.meals[0])
     })
 }
+//recipeSearch('banana')
+
 function regionSearch(region) {
     const regionSearchURL = `https://www.themealdb.com/api/json/v1/1/filter.php?a=`+region
     fetch(regionSearchURL)
