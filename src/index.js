@@ -4,13 +4,23 @@ const recInstruction = el('recipe')
 const recImg = el('food-image')
 const randomMealButton = el('randomFood')
 const randomRec = el('meal');
+const imageHolder = el('mealCard')
 const mealSearch = 'http://www.themealdb.com/api/json/v1/1/search.php?s='
 const getRandomRec = 'https://themealdb.com/api/json/v1/1/random.php'
+const likeBtn = document.getElementById('fg-like-button')
 
 const form = el('sumbitForm')
 
 const search = el('search')
 const submit = el('submit')
+
+likeBtn.addEventListener('click', () => {
+    renderHeart();
+})
+
+function renderHeart() {
+    likeBtn.innerText = `♥`
+}
 
 const generateRegionMeal = meal => {
         const regionalMenu = []
@@ -30,7 +40,7 @@ const generateRegionMeal = meal => {
         const newInnerHTML = `
             <div>
                 <div>
-                    <img src="${meal.strMealThumb}" alt="Meal Image" id='recipeImage'>
+                    <img src="${meal.strMealThumb}" alt="Meal Image" id='mealCard'>
                 </div>
                     <h2>${meal.strMeal}</h2>
             </div>
@@ -57,9 +67,7 @@ const generateMeal = meal => {
     //there has to be a better way for this one this needs formatting as well
     const newInnerHTML = `
 		<div>
-			<div>
-				<img src="${meal.strMealThumb}" alt="Meal Image" id='recipeImage'>
-			</div>
+				
 				<h2>${meal.strMeal}</h2>
                 ${meal.strArea ? `<p><strong>Region:</strong> ${meal.strArea}</p>` : ''}
                 <h5>Ingredients:</h5>
@@ -69,7 +77,9 @@ const generateMeal = meal => {
 				<p>${meal.strInstructions}</p>
 
 		</div>
-	`
+	`    
+  imageHolder.src = meal.strMealThumb
+
 //    recTitle = meal.strMeal
 // how to get title above the button to also generate
     randomRec.innerHTML = newInnerHTML;
@@ -83,7 +93,7 @@ randomMealButton.addEventListener('click', () => {
         generateMeal(res.meals[0])
     })
 })
-
+//event listener to on submit of the form to run the data
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     const mealName = search.value

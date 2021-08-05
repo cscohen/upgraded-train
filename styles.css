@@ -1,35 +1,61 @@
+body {
+    background-color: black;
+    color: white;
+}
+.content {
+    max-width: 800px;
+    margin: auto;
 img {
     border-radius: 4px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    width: 600px;
+    width: 100%;
+    max-width: 800px;
     height: 200px;
     object-fit: cover;
-
 }
-.heroImage {
+#mealCard {
+    border-radius: 4px;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 500px;
+    height: 800px;
+    object-fit: cover;
+}
+.text {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%
+}
+#heroImage {
     position: relative;
     text-align: center;
     color: white;
+    
   }
   /* Top left text */
   .top-left {
     position: absolute;
     top: 8px;
-    left: 16px;
+    left: 30%;
     font-size: 72px;
     filter: drop-shadow(30px 10px 4px black);    
     color: white;
   }
 #foodHolder {
-    width: 800px;
+    width: 1000px;
     height: auto;
 }
-#recipeImage {
-    margin-top: 10px;
-    height: 400px;
-    width: 600px;
-    object-fit: cover;
-}
+.randomFood {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }

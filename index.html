@@ -12,16 +12,29 @@
 </head>
 
 <body>
-
+<div class='content'>
 <!-- For image placeholder for Hero Banner --> 
 <div id='heroImage'>
-    <img src='img/heroBanner.jpg' style='width:100%'>
-    <div class ='top-left'> Strugging to figure out what to nom? </div>
+    <img src='img/heroBanner.jpg' style='width:100%' id='heroImage'>
+    <div class ='text'> Try something tasty! </div>
 </div>    
 <!-- For image placeholder for recipie --> 
 <div id='recipeCard'>
     <div class='image-container'>
         <div class='image-card'>
+            <img src='img/mockupMealFinder.jpeg'  style='width: 100%;' id='mealCard'>
+            <div class="likes-section">
+                <span id="fg-likes" class="likes">You know you love it, give it a click</span>
+                <button id="fg-like-button" class="like-button">♡</button>
+              </div>
+              <div id='foodHolder'></div>
+    
+            <form id='sumbitForm'> 
+                <input type='text' id='search' placeholder="Type your search here" name='mealName'> 
+                <input type="submit" value="Submit" id='submit'>
+            </form>    
+    </div>
+    
   <!--        <h2 id="food-title" class="title">Title of recipe goes here</h2> -->
 	<div id="meal" class="row meal"></div>
 
@@ -32,18 +45,10 @@
               <ol id='ingredient'></ol>
         <div class='recipePrintout'></div>
         <ol id='recipe'></ol>
-    </div>
-    <div id='foodHolder'></div>
-    
-    <div id='foodHolder'></div>
-    
-            <form id='sumbitForm'> 
-                <input type='text' id='search' placeholder="Type your search here" name='mealName'> 
-                <input type="submit" value="Submit" id='submit'>
-            </form>    
-    </div>
+    </div>    
     
     </div>
+</div>
 </div>
 </body>
 </html>
