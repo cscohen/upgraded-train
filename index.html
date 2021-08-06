@@ -1,54 +1,53 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking Mama</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script defer type="text/javascript" src="src/index.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="banner" id="heroImage">
+        <img
+          class="banner-image"
+          src="img/heroBanner.jpg"
+          style="width: 100%"
+          id="heroImage"
+        />
+        <p class="banner-word">Try something tasty!</p>
+      </div>
+      <div class="likes-section">
+        <span id="fg-likes" class="likes-word"
+          >You know you love it, give it a click</span
+        >
+        <button id="fg-like-button" class="like-button">♡</button>
+      </div>
+      <div class="recipe-container">
+        <img
+          class="recipe-image"
+          src="img/mockupMealFinder.jpeg"
+          id="mealCard"
+        />
+      </div>
+      <div id="meal" class="row meal"></div>
+      <div class="search-food">
+        <form id="sumbitForm">
+          <input
+            type="text"
+            id="search"
+            placeholder="Type your search here"
+            name="mealName"
+          />
+          <input type="submit" value="Submit" id="submit" />
+            <button type="button" id="randomFood">Generate a random recipe</button>
+        </form>
+        <button type='button' id='reset'>Reset the page</button>
+      </div>
+    <div>    
 
-  <title>Cooking Mama</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <script defer type="text/javascript" src="src/index.js"></script>
-
-</head>
-
-<body>
-<div class='content'>
-<!-- For image placeholder for Hero Banner --> 
-<div id='heroImage'>
-    <img src='img/heroBanner.jpg' style='width:100%' id='heroImage'>
-    <div class ='text'> Try something tasty! </div>
-</div>    
-<!-- For image placeholder for recipie --> 
-<div id='recipeCard'>
-    <div class='image-container'>
-        <div class='image-card'>
-            <img src='img/mockupMealFinder.jpeg'  style='width: 100%;' id='mealCard'>
-            <div class="likes-section">
-                <span id="fg-likes" class="likes">You know you love it, give it a click</span>
-                <button id="fg-like-button" class="like-button">♡</button>
-              </div>
-              <div id='foodHolder'></div>
-    
-            <form id='sumbitForm'> 
-                <input type='text' id='search' placeholder="Type your search here" name='mealName'> 
-                <input type="submit" value="Submit" id='submit'>
-            </form>    
     </div>
-    
-  <!--        <h2 id="food-title" class="title">Title of recipe goes here</h2> -->
-	<div id="meal" class="row meal"></div>
-
-        <button type="button" id='randomFood'>Generate a random recipe</button>
-
-        <div class='food-list'></div>
-        <ul class='ingredList'></ul>
-              <ol id='ingredient'></ol>
-        <div class='recipePrintout'></div>
-        <ol id='recipe'></ol>
-    </div>    
-    
     </div>
-</div>
-</div>
-</body>
+  </body>
 </html>

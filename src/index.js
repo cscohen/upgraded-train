@@ -1,4 +1,4 @@
-console.log('This is connected!')
+//console.log('This is connected!')
 const recTitle = el('food-title')
 const recInstruction = el('recipe') 
 const recImg = el('food-image')
@@ -7,13 +7,17 @@ const randomRec = el('meal');
 const imageHolder = el('mealCard')
 const mealSearch = 'http://www.themealdb.com/api/json/v1/1/search.php?s='
 const getRandomRec = 'https://themealdb.com/api/json/v1/1/random.php'
-const likeBtn = document.getElementById('fg-like-button')
+const likeBtn = el('fg-like-button')
+const resetBtn = el('reset')
 
 const form = el('sumbitForm')
 
 const search = el('search')
 const submit = el('submit')
 
+resetBtn.addEventListener('click', () => {
+    window.location.reload()
+})
 likeBtn.addEventListener('click', () => {
     renderHeart();
 })

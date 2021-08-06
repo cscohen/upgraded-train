@@ -1,3 +1,4 @@
+/*
 body {
     background-color: black;
     color: white;
@@ -37,9 +38,11 @@ img {
     position: relative;
     text-align: center;
     color: white;
+    height: 200px;
     
   }
   /* Top left text */
+/*
   .top-left {
     position: absolute;
     top: 8px;
@@ -58,4 +61,97 @@ img {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}*/
+body {
+    /* max-width: 100%; */
+    background-color: black;
+    color: white;
+    overflow-y: scroll;
   }
+  .content {
+    max-width: 1000px;
+    margin: auto;
+  }
+  /* Banner Style goes here */
+  .banner {
+    position: relative;
+    /* margin-bottom: 30px; */
+  }
+  .banner-image {
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 30;
+    margin-left: 0;
+    margin-right: 0;
+    /* max-width: 800px; */
+    height: 300px;
+    object-fit: cover;
+  }
+  .banner-word {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    font-size: 40px;
+    font-style: bold;
+    filter: drop-shadow(30px 10px 4px black);
+    color: white;
+  }
+  .recipe-image {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  .search-food {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    margin-bottom: 30px;
+    top: 330px;
+    width: 100%;
+    gap: 20px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  /* like word and heat button style goes here */
+  .likes-section {
+    text-align: center;
+    position: center;
+    right: 10px;
+    top: 310px;
+    margin-bottom: 30px;
+  }
+  .like-button {
+    border: none;
+    color: red;
+    background-color: black;
+  }
+  .likes-word {
+    font-style: italic;
+  }
+  /* Receipe information goes down here/ under banner/ */
+  .recipe-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 20px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .recipe-image {
+    flex: 0 1 250px;
+    height: 500px;
+    margin-bottom: 30px;
+    align-self: center;
+    border-radius: 4px;
+  }
+ #reset {
+     margin-top: 10px;
+     margin-bottom: 20px;
+ }
